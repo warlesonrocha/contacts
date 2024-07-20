@@ -1,4 +1,4 @@
-# Contact's PWA
+# Contact's PWA 📱
 
 ## Descrição
 
