@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9840/9840100.png" type="image/x-icon">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="contact-form">
+            <div class="contact-form-title">
+                <h1>Contact's</h1>
+                <h2>Sua lista de contatos de maneira rápida e fácil</h2>
+            </div>
+            <div class="contact-form-content">
+                <div class="form-input" id="photo-selection">
+                    <label for="photo">Escolha a imagem:</label>
+                    <select id="photo">
+                        <option value="images/semgenero.png" disabled selected></option>
+                        <option value="images/homem.png">Homem</option>
+                        <option value="images/mulher.png">Mulher</option>
+                        <option value="images/garoto.png">Menino</option>
+                        <option value="images/garota.png">Menina</option>
+                        <option value="images/semgenero.png">Sem Gênero</option>
+                    </select>
+                </div>
+                <div class="form-input">
+                    <label for="name">Nome do Contato:</label>
+                    <input type="text" id="name" placeholder="Digite o nome..." required>
+                </div>
+                <div class="form-input">
+                    <label for="phone">DDD + Telefone:</label>
+                    <input type="text" id="phone" placeholder="Digite o telefone..." required>
+                </div>
+                <div class="form-button">
+                    <button id="add-contact">Adicionar</button>
+                    <button id="remove-contact">Remover</button>
+                    <button id="edit-contact">Editar</button>
+                </div>
+            </div>
+        </div>
+        <div class="contact-container">
+            <div id="contact-list"></div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
