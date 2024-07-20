@@ -1,9 +1,9 @@
 const CACHE_NAME = 'contact-list-cache-v1';
 const urlsToCache = [
     '/',
-    '/index.html',
-    '/styles.css',
-    '/script.js'
+    './index.html',
+    './styles.css',
+    './script.js'
 ];
 
 self.addEventListener('install', event => {
@@ -21,16 +21,5 @@ self.addEventListener('fetch', event => {
             .then(response => {
                 return response || fetch(event.request);
             })
-    );
-});
-
-self.addEventListener('push', event => {
-    const options = {
-        body: event.data.text(),
-        icon: '/icon.png',
-        badge: '/badge.png'
-    };
-    event.waitUntil(
-        self.registration.showNotification('Novo Contato Adicionado!', options)
     );
 });
